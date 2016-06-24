@@ -64,7 +64,7 @@ if is_local_host? db['host']
   end
 
   mysql_connection_info = {
-    :host     => 'localhost',
+    :host     => '%',
     :username => 'root',
     :socket   => socket,
     :password => db['root_password']
