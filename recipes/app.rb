@@ -67,7 +67,7 @@ template "#{node['wordpress']['dir']}/wp-config.php" do
   variables(
     :db_name           => node['wordpress']['db']['name'],
     :db_user           => node['wordpress']['db']['user'],
-    :db_password       => wptask,
+    :db_password       => node['wordpress']['db']['pass'],
     :db_host           => node['wordpress']['db']['host'],
     :db_prefix         => node['wordpress']['db']['prefix'],
     :db_charset        => node['wordpress']['db']['charset'],
