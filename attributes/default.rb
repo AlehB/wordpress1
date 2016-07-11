@@ -26,7 +26,7 @@
 default['wordpress']['version'] = 'latest'
 
 default['wordpress']['db']['root_password'] = 'my_root_password'
-default['wordpress']['db']['instance_name'] = '192.168.100.30'
+default['wordpress']['db']['instance_name'] = '192.168.100.33'
 default['wordpress']['db']['name'] = "wordpressdb"
 default['wordpress']['db']['user'] = "wordpressuser"
 default['wordpress']['db']['pass'] = "wptask"
