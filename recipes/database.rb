@@ -77,12 +77,12 @@ if is_local_host? db['host']
 
   mysql_database_user db['user'] do
     connection    mysql_connection_info
-    password      db['pass']
+    password      'wptask'
     host          '%'
     database_name db['name']
     action        :create
   end
-
+  
   mysql_database_user db['user'] do
     connection    mysql_connection_info
     database_name db['name']
