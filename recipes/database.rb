@@ -25,9 +25,15 @@ mysql_client 'default' do
   not_if { node['platform_family'] == 'windows' }
 end
 
-mysql2_chef_gem 'default' do
+gem_package 'mysql2' do
+  gem_binary RbConfig::CONFIG['bindir'] + '/gem'
+  version '0.3.17'
   action :install
 end
+
+#mysql2_chef_gem 'default' do
+#  action :install
+#end
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 ::Chef::Recipe.send(:include, Wordpress::Helpers)
