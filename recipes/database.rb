@@ -21,7 +21,7 @@
 #
 
 mysql_client 'default' do
-  action :create
+  action :install
   not_if { node['platform_family'] == 'windows' }
 end
 
