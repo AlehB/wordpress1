@@ -25,6 +25,8 @@ mysql_client 'default' do
   not_if { node['platform_family'] == 'windows' }
 end
 
+package ['gcc', 'mysql-devel', 'ruby-devel', 'rubygems']
+
 gem_package 'mysql2' do
   gem_binary RbConfig::CONFIG['bindir'] + '/gem'
   version '0.3.17'
