@@ -25,9 +25,9 @@ mysql_client 'default' do
   not_if { node['platform_family'] == 'windows' }
 end
 
-#mysql2_chef_gem 'default' do
-#  action :install
-#end
+mysql2_chef_gem 'default' do
+  action :install
+end
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 ::Chef::Recipe.send(:include, Wordpress::Helpers)
